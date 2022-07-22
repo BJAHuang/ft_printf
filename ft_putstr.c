@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_putstr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ahuang <ahuang@student.codam.nl>             +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/07/22 19:58:02 by ahuang        #+#    #+#                 */
+/*   Updated: 2022/07/22 19:58:02 by ahuang        ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_putstr(char *x)
+int	ft_putstr(char *x)
 {
-	int numbers; //number to return and display in the terminal
-	numbers = 0;
+	int	numbers;
 
-	if (!x) //when not x condition
+	numbers = 0;
+	if (!x)
 	{
-		// return ; //removed in favor of ft_putstr
-		ft_putstr("[NULL]"); //when error return this
-		return (6); //
+		ft_putstr("(null)");
+		return (6);
 	}
 	while ((x[numbers] != '\0') && (x))
 	{

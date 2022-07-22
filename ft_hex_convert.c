@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_hex_convert.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ahuang <ahuang@student.codam.nl>             +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/07/22 19:57:35 by ahuang        #+#    #+#                 */
+/*   Updated: 2022/07/22 19:57:35 by ahuang        ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_hex_convert(unsigned int x, int Hex_UpperlowerCase)
+int	ft_hex_convert(unsigned int x, int Hex_UpperlowerCase)
 {
 	char	*hex;
 	int		length;
 
 	length = 0;
-	if (Hex_UpperlowerCase == 0) //lower case
+	if (Hex_UpperlowerCase == 0)
 	{
 		hex = "0123456789ABCDEF";
 	}
-	else if (Hex_UpperlowerCase == 1) //capital uppercase
+	else if (Hex_UpperlowerCase == 1)
 	{
 		hex = "0123456789abcdef";
 	}
@@ -21,6 +33,5 @@ int ft_hex_convert(unsigned int x, int Hex_UpperlowerCase)
 	}
 	if ((x <= 15) && (x >= 0))
 		length += ft_putchar(hex[x % 16]);
-	// free (hex);
 	return (length);
 }

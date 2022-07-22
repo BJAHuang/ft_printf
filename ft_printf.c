@@ -6,7 +6,7 @@
 /*   By: ahuang <ahuang@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 10:23:25 by ahuang        #+#    #+#                 */
-/*   Updated: 2022/07/22 18:50:55 by ahuang        ########   odam.nl         */
+/*   Updated: 2022/07/22 20:07:40 by ahuang        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int ft_printf (const char *format, ...)
 	length = 0;
 	while (format[x])
 	{
-		if (format[x] == '\0') //protection
-			return (0); //or (NULL)???
-		if (format[x] == '%') //already put in checkformat //removed from checkformat
+		if (format[x] == '\0')
+			return (0);
+		if (format[x] == '%')
 		{
 			length = length + check_format(format[x + 1], arguments);
 			x++;
@@ -61,7 +61,3 @@ int ft_printf (const char *format, ...)
 	va_end(arguments);
 	return (length);
 }
-
-//cast to farmat_s?
-
-// int main (char )

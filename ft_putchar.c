@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_putchar.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ahuang <ahuang@student.codam.nl>             +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/07/22 19:57:50 by ahuang        #+#    #+#                 */
+/*   Updated: 2022/07/22 19:57:50 by ahuang        ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_putchar(char x)
+int	ft_putchar(char x)
 {
-    write(1, &x, 1);
-    return (1);
+	write(1, &x, 1);
+	return (1);
 }
