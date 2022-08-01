@@ -15,7 +15,7 @@
 int	ft_putnbr_unsigned_int(unsigned int x)
 {
 	unsigned int	number;
-	int			length;
+	int				length;
 
 	number = x;
 	length = 0;

@@ -6,7 +6,7 @@
 /*   By: ahuang <ahuang@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 10:23:25 by ahuang        #+#    #+#                 */
-/*   Updated: 2022/08/01 16:46:16 by ahuang        ########   odam.nl         */
+/*   Updated: 2022/08/01 17:09:02 by ahuang        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,10 @@ static int	check_format(char x, va_list Parse_Args)
 	return (0);
 }
 
-int	ft_printf (const char *format, ...)
-
+int	ft_printf(const char *format, ...)
 {
-	int	x;
-	int	length;
+	int		x;
+	int		length;
 	va_list	arguments;
 
 	va_start(arguments, format);
@@ -52,7 +51,7 @@ int	ft_printf (const char *format, ...)
 			length = length + check_format(format[x + 1], arguments);
 			x++;
 		}
-		else 
+		else
 			length = length + ft_putchar(format[x]);
 		x++;
 	}	
